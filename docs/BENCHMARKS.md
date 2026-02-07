@@ -156,3 +156,40 @@ Turbo-Heartbeat achieves the fastest reaction time at the lowest cost by using a
 ---
 
 *Benchmarks will be updated as more models and hardware configurations are tested.*
+
+## Model Comparison: Gemma3:4b vs GLM-4.7-Flash
+
+*Tested: 2026-02-07 19:25 CET*
+
+### Accuracy Comparison
+
+| Scenario | Expected | Gemma3:4b | GLM-4.7-Flash |
+|----------|----------|-----------|---------------|
+| Spam emails | OK | ✅ OK | ✅ OK |
+| Disk 95% full | ESCALATE | ❌ OK | ✅ ESCALATE |
+| Boss email | DEFER/ESCALATE | ❌ OK | ✅ DEFER |
+| Meeting 15min | ESCALATE | ❌ empty | ❌ empty |
+| No signals | OK | ✅ OK | ✅ OK |
+
+**Gemma3:4b accuracy: ~40%** (2/5 correct)
+**GLM-4.7-Flash accuracy: ~80%** (4/5 correct)
+
+### Latency Comparison (warm, ms)
+
+| Metric | Gemma3:4b | GLM-4.7-Flash |
+|--------|-----------|---------------|
+| Cold start | 6727ms | ~20000ms |
+| Warm (simple) | 226ms | 213ms |
+| Warm (complex) | 262ms | 626ms |
+| RAM usage | ~4 GB | ~8.2 GB |
+
+### Verdict
+
+**GLM-4.7-Flash remains the recommended triage model.**
+
+Gemma3:4b is faster on cold start (7s vs 20s) and uses less RAM (4GB vs 8GB),
+but its accuracy on triage tasks is unacceptably low. It fails to recognize
+critical situations (disk full, important emails) and defaults to "OK".
+
+For Raspberry Pi or very low-RAM devices, consider Gemma but with a simpler
+prompt that uses explicit rules instead of judgment.
