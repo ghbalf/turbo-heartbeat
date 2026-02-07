@@ -54,7 +54,7 @@ smtp_from: "siegfried@mickautsch.de"
 
 # Gateway (for escalation)
 gateway_port: 18789
-gateway_token: "33319402a20851fe8a077f8cc1b46ea4e25f7acefca5166a"
+gateway_token: "{{SECRET:GATEWAY_TOKEN}}"
 
 # Statistics
 stats_enabled: true

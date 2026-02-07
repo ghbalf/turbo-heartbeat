@@ -19,7 +19,15 @@ read_config() {
 }
 
 GATEWAY_PORT=$(read_config "gateway_port" "18789")
-GATEWAY_TOKEN=$(read_config "gateway_token" "")
+GATEWAY_TOKEN_RAW=$(read_config "gateway_token" "")
+
+# Resolve Secret Store references
+SECRET_STORE="${HOME}/.openclaw/workspace/scripts/secret-store.sh"
+if [[ "$GATEWAY_TOKEN_RAW" == *"{{SECRET:"* ]] && [ -x "$SECRET_STORE" ]; then
+    GATEWAY_TOKEN=$(bash "$SECRET_STORE" resolve "$GATEWAY_TOKEN_RAW" 2>/dev/null)
+else
+    GATEWAY_TOKEN="$GATEWAY_TOKEN_RAW"
+fi
 
 # Try to get token from OpenClaw config if not in our config
 if [ -z "$GATEWAY_TOKEN" ] && [ -f "$HOME/.openclaw/openclaw.json" ]; then
