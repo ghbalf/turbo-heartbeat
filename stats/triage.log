@@ -2,3 +2,6 @@
 2026-02-07T13:29:53+01:00 DEFER reason="2 non-urgent emails" latency_ms=1003 quiet=false
 2026-02-07T15:12:08+01:00 ERROR decision="ERROR: empty_content" latency_ms=4492 quiet=false
 2026-02-07T15:14:41+01:00 DEFER reason="2 non-urgent emails" latency_ms=904 quiet=false
+2026-02-07T15:23:37+01:00 DEFER reason="gcalcli error prevents calendar sync but is not urgent" latency_ms=20375 quiet=false
+2026-02-07T15:24:16+01:00 DEFER reason="gcalcli not installed (minor configuration issue)" latency_ms=710 quiet=false
+2026-02-07T15:25:15+01:00 DEFER reason="gcalcli not installed (non-critical)" latency_ms=695 quiet=false
