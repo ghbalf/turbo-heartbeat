@@ -35,6 +35,17 @@ COOLDOWN=$(read_config "cooldown_seconds" "300")
 QUIET_START=$(read_config "quiet_start" "23:00")
 QUIET_END=$(read_config "quiet_end" "08:00")
 DISABLE_THINKING=$(read_config "disable_thinking" "false")
+INTERVAL=$(read_config "interval_seconds" "30")
+KEEP_ALIVE_CFG=$(read_config "keep_alive" "auto")
+
+# Calculate Ollama keep_alive (seconds)
+# Auto: interval + 120s buffer (minimum 300s = Ollama default)
+if [ "$KEEP_ALIVE_CFG" = "auto" ]; then
+    KEEP_ALIVE=$(( INTERVAL + 120 ))
+    [ "$KEEP_ALIVE" -lt 300 ] && KEEP_ALIVE=300
+else
+    KEEP_ALIVE="$KEEP_ALIVE_CFG"
+fi
 
 # --- Quiet hours ---
 CURRENT_HOUR=$(date +%H)
@@ -108,6 +119,7 @@ if [ "$DISABLE_THINKING" = "true" ]; then
                 ],
                 \"stream\": false,
                 \"think\": false,
+                \"keep_alive\": \"${KEEP_ALIVE}s\",
                 \"options\": {\"temperature\": 0.1, \"num_predict\": 100}
             }" 2>/dev/null) || {
             echo "$(date -Is) ERROR api_unreachable url=${OLLAMA_BASE}/api/chat" >> "$LOG_FILE"
@@ -142,7 +154,8 @@ if [ "$DISABLE_THINKING" != "true" ]; then
     ],
     "max_tokens": 100,
     "temperature": 0.1,
-    "stream": false
+    "stream": false,
+    "keep_alive": "${KEEP_ALIVE}s"
 }
 EOF
 )

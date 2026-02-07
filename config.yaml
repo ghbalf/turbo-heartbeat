@@ -23,6 +23,13 @@ interval_seconds: 30
 cooldown_seconds: 300
 max_per_hour: 6
 
+# Ollama keep_alive — how long Ollama keeps the model in RAM after a request.
+# Set to "auto" (default) to calculate: interval + 120s buffer.
+# Prevents cold-start latency spikes when interval >= 4 minutes.
+# Only applies to Ollama; ignored by other providers.
+# Format: seconds (int) or "auto"
+keep_alive: "auto"
+
 # Quiet Hours
 quiet_start: "23:00"
 quiet_end: "08:00"

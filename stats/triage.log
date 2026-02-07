@@ -108,3 +108,17 @@
 2026-02-07T17:06:01+01:00 OK cooldown=177s/300s
 2026-02-07T17:07:01+01:00 OK cooldown=237s/300s
 2026-02-07T17:08:01+01:00 OK cooldown=297s/300s
+2026-02-07T17:09:30+01:00 OK latency_ms=20676 quiet=false
+2026-02-07T17:10:10+01:00 OK latency_ms=254 quiet=false
+2026-02-07T17:11:08+01:00 OK latency_ms=246 quiet=false
+2026-02-07T17:12:09+01:00 OK latency_ms=229 quiet=false
+2026-02-07T17:13:08+01:00 OK latency_ms=222 quiet=false
+2026-02-07T17:14:08+01:00 OK latency_ms=201 quiet=false
+2026-02-07T17:15:20+01:00 OK latency_ms=247 quiet=false
+2026-02-07T17:16:14+01:00 OK latency_ms=249 quiet=false
+2026-02-07T17:17:19+01:00 OK latency_ms=196 quiet=false
+2026-02-07T17:18:14+01:00 OK latency_ms=241 quiet=false
+2026-02-07T17:19:12+01:00 OK latency_ms=219 quiet=false
+2026-02-07T17:20:17+01:00 OK latency_ms=208 quiet=false
+2026-02-07T17:21:12+01:00 OK latency_ms=200 quiet=false
+2026-02-07T17:21:17+01:00 OK latency_ms=224 quiet=false

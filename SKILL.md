@@ -56,6 +56,25 @@ This outputs JSON with system capabilities. Use it to recommend a profile.
 8. **Create cron job** — Set up OpenClaw cron for triage loop
 9. **Test** — Run one triage cycle, show result
 
+### Ollama Keep-Alive
+
+When using Ollama, the `keep_alive` config controls how long the model stays loaded in RAM after each request. Default Ollama keep-alive is 5 minutes.
+
+**Problem:** If triage interval ≥ 4 minutes, the model gets unloaded between cycles, causing 15-20s cold-start latency on each triage run.
+
+**Solution:** Set `keep_alive: "auto"` (default) — calculates `interval + 120s` buffer, minimum 300s.
+
+| Interval | Auto keep_alive | Effect |
+|----------|----------------|--------|
+| 30s | 300s (5 min) | Default Ollama behavior |
+| 60s | 300s (5 min) | Default Ollama behavior |
+| 240s (4 min) | 360s (6 min) | Model stays loaded between runs |
+| 360s (6 min) | 480s (8 min) | Model stays loaded between runs |
+
+**Manual override:** Set `keep_alive` to a specific number (seconds) in config.yaml.
+
+**Non-Ollama providers:** The `keep_alive` field is sent but ignored by cloud APIs.
+
 ### Interval Policy
 
 Suggest tested minimum intervals. Accept larger or equal values without comment. If user wants smaller:
