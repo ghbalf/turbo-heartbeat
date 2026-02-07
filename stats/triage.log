@@ -1,0 +1,4 @@
+2026-02-07T13:28:15+01:00 ERROR api_unreachable url=http://localhost:11434/v1/chat/completions
+2026-02-07T13:29:53+01:00 DEFER reason="2 non-urgent emails" latency_ms=1003 quiet=false
+2026-02-07T15:12:08+01:00 ERROR decision="ERROR: empty_content" latency_ms=4492 quiet=false
+2026-02-07T15:14:41+01:00 DEFER reason="2 non-urgent emails" latency_ms=904 quiet=false
