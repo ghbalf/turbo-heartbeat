@@ -1,0 +1,6 @@
+# Stats (local data)
+stats/*.log
+stats/.last_escalation
+
+# Config with secrets (template is in repo)
+# config.yaml  — we keep it as example, but users should not commit their keys
