@@ -5,6 +5,9 @@
 
 set -euo pipefail
 
+# Ensure ~/.local/bin is in PATH (cron has minimal PATH)
+export PATH="$HOME/.local/bin:$PATH"
+
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SKILL_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 CONFIG="$SKILL_DIR/config.yaml"

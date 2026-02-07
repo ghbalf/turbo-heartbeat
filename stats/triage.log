@@ -5,3 +5,106 @@
 2026-02-07T15:23:37+01:00 DEFER reason="gcalcli error prevents calendar sync but is not urgent" latency_ms=20375 quiet=false
 2026-02-07T15:24:16+01:00 DEFER reason="gcalcli not installed (minor configuration issue)" latency_ms=710 quiet=false
 2026-02-07T15:25:15+01:00 DEFER reason="gcalcli not installed (non-critical)" latency_ms=695 quiet=false
+2026-02-07T15:26:26+01:00 ESCALATE reason="gcalcli not installed" latency_ms=538 quiet=false
+2026-02-07T15:27:01+01:00 OK cooldown=35s/300s
+2026-02-07T15:28:01+01:00 OK cooldown=95s/300s
+2026-02-07T15:29:01+01:00 OK cooldown=155s/300s
+2026-02-07T15:30:01+01:00 OK cooldown=215s/300s
+2026-02-07T15:31:02+01:00 OK cooldown=276s/300s
+2026-02-07T15:32:35+01:00 DEFER reason="gcalcli not installed, minor configuration issue" latency_ms=20257 quiet=false
+2026-02-07T15:33:13+01:00 DEFER reason="gcalcli not installed, minor system issue" latency_ms=592 quiet=false
+2026-02-07T15:34:21+01:00 DEFER reason="gcalcli not installed (minor config issue)" latency_ms=673 quiet=false
+2026-02-07T15:35:16+01:00 DEFER reason="gcalcli not installed, minor configuration issue" latency_ms=591 quiet=false
+2026-02-07T15:36:19+01:00 DEFER reason="gcalcli not installed (non-critical, can be fixed later)" latency_ms=813 quiet=false
+2026-02-07T15:37:20+01:00 DEFER reason="gcalcli not installed, can be fixed during next maintenance window" latency_ms=741 quiet=false
+2026-02-07T15:38:19+01:00 DEFER reason="gcalcli not installed, minor configuration issue" latency_ms=613 quiet=false
+2026-02-07T15:39:15+01:00 DEFER reason="gcalcli not installed, minor configuration issue" latency_ms=627 quiet=false
+2026-02-07T15:40:13+01:00 DEFER reason="gcalcli not installed (non-critical)" latency_ms=608 quiet=false
+2026-02-07T15:41:15+01:00 ESCALATE reason="gcalcli not installed" latency_ms=485 quiet=false
+2026-02-07T15:42:01+01:00 OK cooldown=46s/300s
+2026-02-07T15:43:02+01:00 OK cooldown=107s/300s
+2026-02-07T15:44:01+01:00 OK cooldown=166s/300s
+2026-02-07T15:45:01+01:00 OK cooldown=226s/300s
+2026-02-07T15:46:01+01:00 OK cooldown=286s/300s
+2026-02-07T15:47:33+01:00 DEFER reason="gcalcli error is minor and can be fixed later" latency_ms=20350 quiet=false
+2026-02-07T15:48:13+01:00 DEFER reason="gcalcli not installed prevents calendar sync, but can be fixed during next maintenance window." latency_ms=900 quiet=false
+2026-02-07T15:49:27+01:00 ESCALATE reason="gcalcli not installed" latency_ms=541 quiet=false
+2026-02-07T15:50:01+01:00 OK cooldown=34s/300s
+2026-02-07T15:51:01+01:00 OK cooldown=94s/300s
+2026-02-07T15:52:01+01:00 OK cooldown=154s/300s
+2026-02-07T15:53:01+01:00 OK cooldown=214s/300s
+2026-02-07T15:54:01+01:00 OK cooldown=274s/300s
+2026-02-07T15:55:39+01:00 ESCALATE reason="System alert (gateway down) and calendar error" latency_ms=20924 quiet=false
+2026-02-07T15:56:01+01:00 OK cooldown=22s/300s
+2026-02-07T15:57:01+01:00 OK cooldown=82s/300s
+2026-02-07T15:58:01+01:00 OK cooldown=142s/300s
+2026-02-07T15:59:01+01:00 OK cooldown=202s/300s
+2026-02-07T16:00:01+01:00 OK cooldown=262s/300s
+2026-02-07T16:01:30+01:00 ESCALATE reason="System alert (gateway down) requires immediate attention" latency_ms=20357 quiet=false
+2026-02-07T16:02:01+01:00 OK cooldown=31s/300s
+2026-02-07T16:03:01+01:00 OK cooldown=91s/300s
+2026-02-07T16:04:01+01:00 OK cooldown=151s/300s
+2026-02-07T16:05:01+01:00 OK cooldown=211s/300s
+2026-02-07T16:06:01+01:00 OK cooldown=271s/300s
+2026-02-07T16:07:34+01:00 ESCALATE reason="System alert (gateway down) requires immediate attention" latency_ms=20734 quiet=false
+2026-02-07T16:08:01+01:00 OK cooldown=27s/300s
+2026-02-07T16:09:01+01:00 OK cooldown=87s/300s
+2026-02-07T16:10:01+01:00 OK cooldown=147s/300s
+2026-02-07T16:11:01+01:00 OK cooldown=207s/300s
+2026-02-07T16:12:01+01:00 OK cooldown=267s/300s
+2026-02-07T16:13:32+01:00 ESCALATE reason="Gateway down, gcalcli error" latency_ms=20585 quiet=false
+2026-02-07T16:14:01+01:00 OK cooldown=29s/300s
+2026-02-07T16:15:01+01:00 OK cooldown=89s/300s
+2026-02-07T16:16:01+01:00 OK cooldown=149s/300s
+2026-02-07T16:17:01+01:00 OK cooldown=209s/300s
+2026-02-07T16:18:01+01:00 OK cooldown=269s/300s
+2026-02-07T16:19:33+01:00 ESCALATE reason="System alert (gateway down) and calendar error" latency_ms=20603 quiet=false
+2026-02-07T16:20:01+01:00 OK cooldown=28s/300s
+2026-02-07T16:21:01+01:00 OK cooldown=88s/300s
+2026-02-07T16:22:01+01:00 OK cooldown=148s/300s
+2026-02-07T16:23:01+01:00 OK cooldown=208s/300s
+2026-02-07T16:24:01+01:00 OK cooldown=268s/300s
+2026-02-07T16:25:35+01:00 DEFER reason="gcalcli not installed (minor config issue)" latency_ms=20539 quiet=false
+2026-02-07T16:26:13+01:00 DEFER reason="gcalcli not installed - minor configuration issue" latency_ms=620 quiet=false
+2026-02-07T16:27:13+01:00 DEFER reason="gcalcli not installed (minor configuration issue)" latency_ms=625 quiet=false
+2026-02-07T16:28:11+01:00 DEFER reason="gcalcli not installed (minor configuration issue)" latency_ms=636 quiet=false
+2026-02-07T16:29:10+01:00 DEFER reason="gcalcli error is non-critical and can be addressed during next maintenance window." latency_ms=946 quiet=false
+2026-02-07T16:30:11+01:00 DEFER reason="gcalcli not installed (minor configuration issue)" latency_ms=653 quiet=false
+2026-02-07T16:31:13+01:00 DEFER reason="gcalcli not installed, can be resolved during next maintenance window" latency_ms=765 quiet=false
+2026-02-07T16:32:13+01:00 DEFER reason="gcalcli not installed (non-critical, can be fixed later)" latency_ms=809 quiet=false
+2026-02-07T16:33:11+01:00 DEFER reason="Calendar error requires installation but is not urgent" latency_ms=592 quiet=false
+2026-02-07T16:34:11+01:00 DEFER reason="gcalcli error is non-critical and can be resolved during next maintenance window." latency_ms=848 quiet=false
+2026-02-07T16:35:12+01:00 DEFER reason="gcalcli not installed, can be resolved during next maintenance window" latency_ms=727 quiet=false
+2026-02-07T16:36:12+01:00 DEFER reason="gcalcli not installed (minor config issue)" latency_ms=612 quiet=false
+2026-02-07T16:37:12+01:00 DEFER reason="gcalcli not installed (minor config issue)" latency_ms=635 quiet=false
+2026-02-07T16:38:10+01:00 DEFER reason="gcalcli not installed (non-critical)" latency_ms=601 quiet=false
+2026-02-07T16:39:10+01:00 DEFER reason="gcalcli not installed prevents calendar sync but is a minor configuration issue." latency_ms=817 quiet=false
+2026-02-07T16:40:10+01:00 ESCALATE reason="gcalcli not installed" latency_ms=489 quiet=false
+2026-02-07T16:41:01+01:00 OK cooldown=51s/300s
+2026-02-07T16:42:01+01:00 OK cooldown=111s/300s
+2026-02-07T16:43:01+01:00 OK cooldown=171s/300s
+2026-02-07T16:44:02+01:00 OK cooldown=232s/300s
+2026-02-07T16:45:01+01:00 OK cooldown=291s/300s
+2026-02-07T16:46:32+01:00 DEFER reason="gcalcli error prevents calendar sync but can be fixed later" latency_ms=20516 quiet=false
+2026-02-07T16:47:14+01:00 DEFER reason="gcalcli not installed, minor configuration issue" latency_ms=622 quiet=false
+2026-02-07T16:48:14+01:00 DEFER reason="gcalcli not installed (minor configuration issue)" latency_ms=647 quiet=false
+2026-02-07T16:49:08+01:00 DEFER reason="gcalcli not installed (minor config issue, can be fixed later)" latency_ms=796 quiet=false
+2026-02-07T16:50:13+01:00 ESCALATE reason="gcalcli not installed" latency_ms=541 quiet=false
+2026-02-07T16:51:01+01:00 OK cooldown=48s/300s
+2026-02-07T16:52:01+01:00 OK cooldown=108s/300s
+2026-02-07T16:53:01+01:00 OK cooldown=168s/300s
+2026-02-07T16:54:01+01:00 OK cooldown=228s/300s
+2026-02-07T16:55:01+01:00 OK cooldown=288s/300s
+2026-02-07T16:56:25+01:00 DEFER reason="gcalcli error prevents calendar sync but is non-critical" latency_ms=20691 quiet=false
+2026-02-07T16:57:03+01:00 DEFER reason="gcalcli not installed (minor configuration issue)" latency_ms=636 quiet=false
+2026-02-07T16:58:06+01:00 DEFER reason="gcalcli not installed, non-critical" latency_ms=571 quiet=false
+2026-02-07T16:59:04+01:00 DEFER reason="gcalcli not installed (minor configuration issue, can be fixed later)" latency_ms=818 quiet=false
+2026-02-07T17:00:04+01:00 DEFER reason="gcalcli not installed (minor config issue)" latency_ms=634 quiet=false
+2026-02-07T17:01:05+01:00 DEFER reason="gcalcli error is non-critical and can be addressed during next maintenance window." latency_ms=854 quiet=false
+2026-02-07T17:02:04+01:00 DEFER reason="gcalcli not installed (minor config issue, can wait)" latency_ms=758 quiet=false
+2026-02-07T17:03:04+01:00 ESCALATE reason="gcalcli not installed" latency_ms=500 quiet=false
+2026-02-07T17:04:01+01:00 OK cooldown=57s/300s
+2026-02-07T17:05:01+01:00 OK cooldown=117s/300s
+2026-02-07T17:06:01+01:00 OK cooldown=177s/300s
+2026-02-07T17:07:01+01:00 OK cooldown=237s/300s
+2026-02-07T17:08:01+01:00 OK cooldown=297s/300s
