@@ -150,11 +150,35 @@ skills/turbo-heartbeat/
 
 Turbo-Heartbeat runs as a **hybrid integration**:
 
-- **Fast loop:** OpenClaw cron job runs `triage.sh` every N seconds
-- **Regular heartbeat:** OpenClaw's built-in heartbeat remains as a safety net (~30 min)
-- **Escalation:** On ESCALATE → `cron wake` event triggers the main model immediately
+- **Fast loop:** System cron runs `triage.sh` every N seconds
+- **Regular heartbeat:** OpenClaw's built-in heartbeat remains as a safety net
+- **Escalation:** On ESCALATE → wake event triggers the main model immediately
 
 The regular heartbeat catches anything the triage might miss. Belt and suspenders.
+
+#### 💡 Optimizing the OpenClaw Heartbeat
+
+With Turbo-Heartbeat handling fast triage, your OpenClaw heartbeat becomes a **safety net only**. Consider optimizing it to save tokens and money:
+
+| Setting | Without Turbo-HB | With Turbo-HB | Savings |
+|---------|-------------------|---------------|---------|
+| **Heartbeat interval** | 15–30 min | 60–120 min | 2–8× fewer polls |
+| **Heartbeat model** | Main model (Opus, GPT-4) | Cheaper model (Haiku, GPT-4o-mini) | 5–20× cheaper per poll |
+| **Combined** | ~$2–7/day | ~$0.10–0.50/day | **90–95% savings** |
+
+**How to adjust** (ask your assistant):
+
+```
+"Increase my heartbeat interval to 2 hours"
+"Use Haiku for heartbeat checks"
+```
+
+Your OpenClaw heartbeat now only needs to:
+- Run periodic maintenance tasks
+- Catch edge cases the triage might miss
+- Serve as a "dead man's switch" if the triage loop stops
+
+It no longer needs to be fast *or* smart — just reliable.
 
 ## Recommended Triage Models
 
@@ -225,7 +249,7 @@ Escalation reasons: 5× email, 2× calendar, 1× system
 
 ## License
 
-[TBD — MIT or Apache 2.0]
+MIT — see [LICENSE](LICENSE)
 
 ## Credits
 
