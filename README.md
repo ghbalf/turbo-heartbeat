@@ -58,55 +58,44 @@ A dedicated **triage model** acts as a fast dispatcher. It checks for important 
 - `bash`, `curl`, `jq`
 - For Profile A/C/D: [Ollama](https://ollama.ai) with a small model loaded
 
-### From GitHub Release
-
-Download the latest release archive — it contains only the files you need:
-
-```bash
-# Download and extract
-curl -L https://github.com/ghbalf/turbo-heartbeat/releases/latest/download/turbo-heartbeat.tar.gz | tar xz
-
-# Move to wherever you keep your services
-mv turbo-heartbeat /path/to/your/services/
-
-# Copy example config
-cd /path/to/your/services/turbo-heartbeat
-cp config.example.yaml config.yaml
-
-# Edit config.yaml with your settings (model, interval, credentials, etc.)
-nano config.yaml
-```
-
-### From Source
+### Quick Install
 
 ```bash
 git clone https://github.com/ghbalf/turbo-heartbeat.git
 cd turbo-heartbeat
-cp config.example.yaml config.yaml
-# Edit config.yaml
+bash install.sh
 ```
 
-### Setup
+The installer:
+- Copies runtime files to `~/.local/share/turbo-heartbeat/`
+- Detects Ollama and recommends an interval
+- Creates `config.yaml` from the example (edit it afterwards!)
+- Sets up the cron job
+- Runs a test triage
 
-1. **Detect your environment:**
+Override the install location: `TURBO_HEARTBEAT_DIR=/my/path bash install.sh`
+
+Uninstall: `bash install.sh --uninstall`
+
+### From Release Archive (no git)
+
+```bash
+curl -L https://github.com/ghbalf/turbo-heartbeat/releases/latest/download/turbo-heartbeat.tar.gz | tar xz
+cd turbo-heartbeat
+bash install.sh
+```
+
+### Manual Setup
+
+If you prefer to do it yourself:
+
+1. Copy files wherever you want
+2. `cp config.example.yaml config.yaml` and edit it
+3. Add a cron entry:
    ```bash
-   bash scripts/detect-env.sh
-   ```
-   Outputs JSON with system capabilities — helps you pick a profile.
-
-2. **Edit `config.yaml`** — set your triage model, interval, signal collectors, and credentials.
-
-3. **Add cron entry:**
-   ```bash
-   # Example: run every 60 seconds
    * * * * * cd /path/to/turbo-heartbeat && bash scripts/triage.sh >> stats/triage.log 2>&1
    ```
-
-4. **Test:**
-   ```bash
-   bash scripts/triage.sh
-   # Should output: OK, DEFER: <reason>, or ESCALATE: <reason>
-   ```
+4. Test: `bash scripts/triage.sh`
 
 ## Signal Collectors
 

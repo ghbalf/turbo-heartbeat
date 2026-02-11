@@ -15,6 +15,7 @@ tar czf "$OUT" \
   --transform="s,^,turbo-heartbeat/," \
   README.md \
   LICENSE \
+  install.sh \
   config.example.yaml \
   scripts/detect-env.sh \
   scripts/triage.sh \
